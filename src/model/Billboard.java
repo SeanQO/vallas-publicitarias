@@ -2,7 +2,6 @@ package model;
 
 import java.io.Serializable;
 
-@SuppressWarnings("unused")
 public class Billboard implements Serializable {
 
 	private static final long serialVersionUID = 1;
@@ -12,7 +11,7 @@ public class Billboard implements Serializable {
 	private boolean inUse;
 	private String brand;
 
-	public Billboard(float height, float width, boolean inUse, String brand) {
+	public Billboard(double height, double width, boolean inUse, String brand) {
 		this.height = height;
 		this.width = width;
 		this.inUse = inUse;
@@ -37,7 +36,8 @@ public class Billboard implements Serializable {
 
 	public double calculateArea() {
 		double area = 0;
-
+		area = height * width;
+		
 		return area;
 	}
 
